@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> 자취건몰  </title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"맑은 고딕",sans-serif;
+}
+
+body{
+    background:#f5f6f8;
+}
+
+header{
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 80px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:30px;
+    color:#00b894;
+    font-weight:bold;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00b894;
+}
+
+.hero{
+    height:350px;
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+    url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.search-box{
+    display:flex;
+    width:650px;
+    background:white;
+    border-radius:40px;
+    overflow:hidden;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    padding:18px;
+    font-size:17px;
+}
+
+.search-box button{
+    width:120px;
+    border:none;
+    background:#00b894;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.container{
+    width:1100px;
+    margin:50px auto;
+}
+
+.title{
+    font-size:28px;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:18px;
+}
+
+.price{
+    color:#00b894;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.location{
+    margin:10px 0;
+    color:#666;
+}
+
+.info{
+    color:#777;
+    font-size:14px;
+}
+
+.tip{
+    margin-top:60px;
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+}
+
+.tip ul{
+    margin-top:20px;
+    margin-left:20px;
+    line-height:35px;
+}
+
+footer{
+    margin-top:60px;
+    background:#2d3436;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+button:hover{
+    opacity:.9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+자취몰
+</div>
+
+<nav>
+<a href="#">홈</a>
+<a href="#">원룸 찾기</a>
+<a href="#">자취 꿀팁</a>
+<a href="#">커뮤니티</a>
+<a href="#">문의</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>내게 맞는 원룸을 찾아보세요</h1>
+
+<div class="search-box">
+
+<input type="text" placeholder="지역 또는 지하철역 검색">
+
+<button onclick="searchRoom()">
+검색
+</button>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<h2 class="title">추천 원룸</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="C:\home\img\incheon.jpg">
+
+<div class="card-body">
+
+<div class="price">월세 3400만원</div>
+
+<div class="location">
+인천 미추홀구
+</div>
+
+<div class="info">
+원룸 · 18㎡ · 관리비 5만원
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="C:\home\img\doro.jpg">
+
+<div class="card-body">
+
+<div class="price">월세 1234만원</div>
+
+<div class="location">
+부평구
+</div>
+
+<div class="info">
+풀옵 · 역세권 · 관리비 포함
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="C:\home\img\seo.jpg">
+
+<div class="card-body">
+
+<div class="price">전세 5000민원</div>
+
+<div class="location">
+서구
+</div>
+
+<div class="info">
+주차 가능 · 신축
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="tip">
+
+<h2>자취 생활 팁:</h2>
+
+<ul>
+
+<li>장보기 전 냉장고 먼저 확인!</li>
+
+<li>배달보간 어지간해서 직접 요리배워서 해먹기!</li>
+
+<li>전기와 가스를 사용 안할때는 반드시 확인!</li>
+
+<li>월별 예산 정해 생활비 관리하기!</li>
+
+<li>분리수거 날짜를 미리 확인하기!</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>자취ON</h3>
+
+<p>혼자 사는 사람들을 위한 원룸 정보와 생활 팁을 제공해요</p>
+
+<p>HTML CSS 자바스크립트 과제용 </p>
+
+</footer>
+
+<script>
+
+function searchRoom(){
+
+alert("검색 기능은 못 만들었어요");
+
+}
+
+</script>
+
+</body>
+</html>
